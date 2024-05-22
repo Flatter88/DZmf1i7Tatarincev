@@ -1,10 +1,17 @@
 import random
 
-m = 15
-A = [random.randint(1, 100) for _ in range(m)] # - _ это не важное имя переменной
-B = [random.randint(1, 100) for _ in range(m)]
-K = [1 if A[i] > B[i] else 0 for i in range(m)]
+m = 25
 
-print("Массив A:", A)
-print("Массив B:", B)
-print("Массив K:", K)
+C = [random.randint(1, 100) for _ in range(m)]
+
+chet = sum(C[i] for i in range(0, m, 2)) # - (начало,конец,шаг)
+
+NEchet = sum(C[i] for i in range(1, m, 2))
+
+if chet > NEchet:
+    summa = chet
+else:
+    summa = NEchet
+
+print("Массив C:", C)
+print("Большая сумма:", summa)
