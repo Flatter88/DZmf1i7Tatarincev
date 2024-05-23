@@ -24,8 +24,8 @@ def find_max_product_column(matrix):
             max_column_index = i
     return max_column_index
 
-def extract_column(matrica, column_index):
-    return matrica[:, column_index]
+def extract_column(matrix, column_index):
+    return matrix[:, column_index]
 
 filename = 'matrica.txt'
 matrix = read_matrix_from_file(filename)
