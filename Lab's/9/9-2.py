@@ -1,28 +1,18 @@
-import numpy as np
+import numpy as np 
+N=28
 
-N = 3
-
-A = np.genfromtxt('9A.txt')
-print('Исходный массив A')
-print(A)
-
-B = np.genfromtxt('9B.txt')
-print('Исходный массив B')
-print(B)
-
+A = np.array([[1, 5, 1], [4, -1, 1], [1, 7, 23]])
+B = np.array([19, 11, 364])
 Adiag = np.diag(A)
 Alpha = A.T/Adiag
 Alpha[np.diag_indices_from(Alpha)] = 0
 Alpha = Alpha.T
-
-print('===================')
+print('=======================================')
 print(Alpha)
-print('===================')
-
+print('=======================================')
 Beta = B/Adiag
 print(Beta)
-print('===================')
-
+print('=======================================')
 x = np.zeros(N, dtype = float)
 z = 100
 KMAX = 100
@@ -37,10 +27,4 @@ while (z>0.001) & (k<KMAX):
     k+=1
 
 print("k = ", k, "Погрешность = ", z)
-print('')
-print('X')
-
-for i in range (0,N):
-    print('%f'%x[i], end=' ')
-
 print('')

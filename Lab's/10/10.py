@@ -1,7 +1,10 @@
 import numpy as np
-
-N = 3
-A = np.genfromtxt('10.txt')
+s=23
+g=7
+N = 23
+p=2*(g+s)
+m = -p+s
+A = [[p/6, m/6, 2*s],[m/6, 2*p+s/6, m/6],[2*s, m, p/6]]
 
 print('Исходный массив A')
 print(A)
